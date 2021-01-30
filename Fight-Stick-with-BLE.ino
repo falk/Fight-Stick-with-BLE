@@ -17,7 +17,7 @@ const int DELAY_MS = 1000 / FREQUENCY;
 const int DELAY_NOT_CONNECTED = 750;
 uint8_t ledOn = 0;
 
-BleGamepad bleGamepad("Xbox-ESP", "Richter", 100);
+BleGamepad bleGamepad("Fight Stick BLE", "falk", 100);
 Profiles *p;
 inputs_t inputs2send;
 SemaphoreHandle_t coordinator;
@@ -61,7 +61,7 @@ void loop() {
     // set values to bleGamepad
     bleGamepad.release(~inputs2send.buttons);
     bleGamepad.press(inputs2send.buttons);
-    bleGamepad.setAxes(ax[0], ax[1], ax[2], ax[5], ax[3], ax[4], inputs2send.dpad);
+    bleGamepad.setAxes(0, 0, 0, 0, 0, 0, inputs2send.dpad);
 
     // output
     PRINT_BINARY(inputs2send.buttons);
