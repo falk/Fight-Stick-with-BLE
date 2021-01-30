@@ -1,6 +1,6 @@
 # ESP32 Fight Stick Controller
 
-This is a project for converting a Mad Catz Fight Stick to wireless using an ESP32 devkit v1.
+This is a project for converting a Mad Catz Fight Stick to wireless bluetooth LE using an ESP32.
 
 ## Credits
 
