@@ -4,4 +4,4 @@ This is a project for converting a Mad Catz Fight Stick to wireless using an ESP
 
 ## Credits
 
-* [__BRichter99__](BRichter99/Xbox360-Controller-with-BLE) for the original code.
+* [__BRichter99__](https://github.com/BRichter99/Xbox360-Controller-with-BLE) for the original code.
