@@ -45,7 +45,6 @@ void Profiles::p0(inputs_t *inputs, int8_t **analogAvg, uint8_t index) {
   // measure values directly
   inputs->buttons = buttons();
   inputs->dpad = dpad();
-  getAxes(inputs->axes);
 }
 
 void Profiles::p1(inputs_t *inputs, int8_t **analogAvg, uint8_t index) {}

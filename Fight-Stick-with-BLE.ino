@@ -56,7 +56,6 @@ void loop() {
     xSemaphoreTake(p->inputsMutex, portMAX_DELAY);
     inputs2send = p->inputs;
     xSemaphoreGive(p->inputsMutex);
-    int8_t *ax = inputs2send.axes;
 
     // set values to bleGamepad
     bleGamepad.release(~inputs2send.buttons);
@@ -65,8 +64,8 @@ void loop() {
 
     // output
     PRINT_BINARY(inputs2send.buttons);
-    PRINTF(" | %c | {lX=%+4d}, {lY=%+4d}, {lZ=%+4d}, {rZ=%+4d}, {rX=%+4d}, {rY=%+4d}\n",
-           dpadToChar(inputs2send.dpad), ax[0], ax[1], ax[2], ax[5], ax[3], ax[4]);
+    PRINTF(" | %c |\n",
+           dpadToChar(inputs2send.dpad));
   } else {
     led_circle();
     led_set(0x1 << p->getCurrentProfile());
