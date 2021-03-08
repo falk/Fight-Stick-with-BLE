@@ -24,7 +24,7 @@ ADC2     13 |               | 15    ADC2
 */
 
 void setupPins();
-uint16_t buttons();
+uint64_t buttons();
 void getAxes(int8_t *);
 uint8_t dpad();
 

@@ -9,8 +9,6 @@
 
 class BleConnectionStatus : public BLEServerCallbacks
 {
-private:
-  BLE2902* descriptor();
 public:
   BleConnectionStatus(void);
   SemaphoreHandle_t sem;

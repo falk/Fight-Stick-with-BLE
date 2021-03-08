@@ -60,12 +60,12 @@ void loop() {
     // set values to bleGamepad
     bleGamepad.release(~inputs2send.buttons);
     bleGamepad.press(inputs2send.buttons);
-    bleGamepad.setAxes(0, 0, 0, 0, 0, 0, inputs2send.dpad);
+   // bleGamepad.setAxes(0, 0, 0, 0, 0, 0, inputs2send.dpad);
+    bleGamepad.setHat1(inputs2send.dpad);
 
     // output
     PRINT_BINARY(inputs2send.buttons);
-    PRINTF(" | %c |\n",
-           dpadToChar(inputs2send.dpad));
+    PRINTF(" | %c |\n", dpadToChar(inputs2send.dpad));
   } else {
     led_circle();
     led_set(0x1 << p->getCurrentProfile());

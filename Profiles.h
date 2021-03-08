@@ -10,7 +10,7 @@
 #define MOVING_AVG  5
 
 struct {
-  uint16_t buttons;
+  uint64_t buttons;
   uint8_t dpad;
   int8_t axes[N_AXES];
 } typedef inputs_t;

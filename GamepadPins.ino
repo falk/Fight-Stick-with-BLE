@@ -47,8 +47,8 @@ void setupPins() {
   pinMode(LED_4, OUTPUT);
 }
 
-uint16_t buttons() {
-  uint16_t b=0x0;
+uint64_t buttons() {
+  uint64_t b=0x0;
   int inputPin,
   buttonOut;
   for (int i=N_BUTTONS; --i>=0; ) {
